@@ -1,0 +1,57 @@
+.togglebtn{
+    background-color: rgb(229 229 229);
+    height: 4.5rem;
+    width: 26.5rem;
+    border-radius: 34px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1px 0 rgb(24 94 224 / 15%), 0 6px 12px 0 rgb(24 94 224 / 15%);
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.slider{
+    position: absolute;
+    background-color: white;
+    border-radius: 25px;
+    height: 3.3rem;
+    width: 13rem;
+    transition: 0.25s ease-out;
+}
+
+#now-btn{
+    position: relative;
+    left: 12%;
+}
+
+#forecast-btn{
+    position: relative;
+    right: 12%;
+}
+
+#now-btn,#forecast-btn{
+    z-index: 1;
+    background: transparent;
+}
+
+#forecast-btn:focus ~ .slider {
+    transform: translateX(95%);
+  }
+
+@media screen and (max-width: 700px){
+    .togglebtn{
+        transform: scale(0.7);
+    }
+}
+
