@@ -3,6 +3,7 @@ import Togglebtn from "./components/togglebtn";
 import Now from "./pages/now";
 import "./styles/App.css";
 
+
 function App() {
   return (
     <div className="App ">
