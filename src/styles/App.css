@@ -2,6 +2,10 @@ body,html{
   margin:0;
   padding:0;
   height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgb(255 255 255),rgb(124 207 255));;
+  
 }
 
 .App {
@@ -26,19 +30,20 @@ body,html{
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-left: 13%;
 }
 
 .searchbtn{
-  background-color: aqua;
-  color: black;
+  background-color: black;
+  color: white;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
 }
 
 .degreebtn{
-  background-color: aqua;
-  color: black;
+  background-color: black;
+  color: white;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -46,4 +51,36 @@ body,html{
 
 .place{
   font-size: 1.5rem;
+}
+
+.search-box{
+    border-radius: 17px;
+    width: 20rem;
+    height: 32px;
+    position: relative;
+    left: 0%;
+}
+
+.close-btn{
+    position: absolute;
+    left: 70%;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.search-box:focus{
+  outline: none;
+  border: none;
+}
+
+
+@media  screen and (max-width:700px) {
+  .search-box{
+    left: 2%;
+    width: 66%;
+  }
+
+  .close-btn{
+    left: 70%;
+  }
 }

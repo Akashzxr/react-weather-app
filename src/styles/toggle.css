@@ -1,5 +1,6 @@
 .togglebtn{
     background-color: rgb(229 229 229);
+    color: black;
     height: 4.5rem;
     width: 26.5rem;
     border-radius: 34px;
@@ -47,6 +48,10 @@
 
 #forecast-btn:focus ~ .slider {
     transform: translateX(95%);
+  }
+
+#now-btn:focus ~ .slider {
+    transform: translateX(0%);
   }
 
 @media screen and (max-width: 700px){

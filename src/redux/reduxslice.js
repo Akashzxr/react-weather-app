@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE ={
     count : 0,
-    data:null,
+     lat:0,
+     long:0,
 }
 
 export const reduxSlice = createSlice({
@@ -12,12 +13,14 @@ export const reduxSlice = createSlice({
     increment:(state)=>{
         state.count+=1;
     },
-    
+    latitude:(state,action)=>{
+      state.lat=action.payload;
+    },
   },
 });
 
 
-export const { increment } = reduxSlice.actions;
+export const { increment,latitude } = reduxSlice.actions;
 
 
 export default reduxSlice.reducer;
