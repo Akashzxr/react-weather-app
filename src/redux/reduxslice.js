@@ -11,9 +11,6 @@ export const reduxSlice = createSlice({
   name: "redux",
   initialState: INITIAL_STATE,
   reducers: {
-    increment:(state)=>{
-        state.count+=1;
-    },
     latitude:(state,action)=>{
       state.lat=action.payload;
     },
@@ -27,7 +24,7 @@ export const reduxSlice = createSlice({
 });
 
 
-export const { increment,latitude,longtitude,input } = reduxSlice.actions;
+export const { latitude,longtitude,input } = reduxSlice.actions;
 
 
 export default reduxSlice.reducer;

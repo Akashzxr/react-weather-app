@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { latitude } from "../../redux/reduxslice";
 import down from "../../assets/pressure-low.svg";
 import up from "../../assets/pressure-high.svg";
@@ -11,9 +12,11 @@ import wind from "../../assets/wind.svg";
 import "../../styles/nowdetails.css";
 
 export default function Nowdetails(){
-
+   
+   const ins = useSelector((state)=>state.redux.input);
    const dispatch = useDispatch();
    
+  //const [ins,setins]=useState("kodungallur"); 
   const [fetchdata,setfetchdata]=useState();
   const [day,setday] = useState();
   const [month,setmonth]=useState();
@@ -31,7 +34,7 @@ export default function Nowdetails(){
 
   async function getdata(){
     //fetching details
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=kodungallur&units=metric&appid=55b2f4b739998d82795ba5cabb50890f',{mode:'cors'});
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+ins+'&units=metric&appid=55b2f4b739998d82795ba5cabb50890f',{mode:'cors'});
     const result = await response.json();
     setfetchdata(result);
     //getting date from the timezone
@@ -58,17 +61,23 @@ export default function Nowdetails(){
     sethumidity(result.main.humidity);
     setwindspeed(result.wind.speed);
     seticon(result.weather[0].icon);
-    setrain(result.rain["1h"]);
+    if('rain' in result){
+      setrain(result.rain["1h"]);
+    }
+    else{
+      setrain(0.0);
+    }
+    
 
     console.log(result);
-    //console.log(result.coord.lat);
+    console.log(result.coord.lat);
    //setting latitude and longitude
    dispatch(latitude(result.coord.lat));
   }
 
   useEffect(()=>{
     getdata();
-  },[])
+  },[ins])
 
   return(
     <div className="nowdetails">
