@@ -1,0 +1,28 @@
+.hour-weather-details{
+    display: flex;
+    gap: 36%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.hour-weather-details img{
+    width: 20%;
+}
+
+.hourlydeails{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hourly-weather{
+    font-weight: 700;
+}
+
+@media screen and (max-width:700px) {
+    .hour-weather-details{
+        gap: 20%;
+    }
+}

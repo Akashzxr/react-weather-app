@@ -14,11 +14,9 @@ export const reduxSlice = createSlice({
   reducers: {
     latitude:(state,action)=>{
       state.lat=action.payload;
-      console.log(state.lat);
     },
     longtitude:(state,action)=>{
       state.long=action.payload;
-      console.log(state.long);
     },
     input:(state,action)=>{
      state.input=action.payload;

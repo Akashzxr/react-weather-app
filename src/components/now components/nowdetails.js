@@ -40,6 +40,7 @@ export default function Nowdetails() {
 
       //getting date from the timezone
       let d = new Date().toLocaleString("en-US", { timeZone: result.timeZone });
+      
 
       //setting day,month and time
       const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
@@ -70,7 +71,7 @@ export default function Nowdetails() {
       else {
          setrain(0.0);
       }
-      //console.log(result)
+      console.log(result)
       //setting latitude and longitude
       dispatch(latitude(result.coord.lat));
       dispatch(longtitude(result.coord.lon));
