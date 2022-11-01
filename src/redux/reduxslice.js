@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE ={
-    count : 0,
+    click : true,
      lat:10.2167,
      long:76.2167,
      input:"kodungallur",
@@ -23,12 +23,15 @@ export const reduxSlice = createSlice({
     },
     data:(state,action)=>{
       state.data=action.payload;
-    }
+    },
+    click:(state,action)=>{
+      state.click=action.payload;
+    },
   },
 });
 
 
-export const { latitude,longtitude,input,data } = reduxSlice.actions;
+export const { latitude,longtitude,input,data,click } = reduxSlice.actions;
 
 
 export default reduxSlice.reducer;

@@ -1,15 +1,20 @@
 import Heading from "./components/heading";
 import Togglebtn from "./components/togglebtn";
-import Now from "./pages/now";
+import { useSelector } from "react-redux";
+import Nowdetails from "./components/now components/nowdetails";
+import Hourlydetails from "./components/now components/hourdetails";
 import "./styles/App.css";
 
 
 function App() {
+    
+  const clickdata = useSelector((state)=>state.redux.click)
+
   return (
     <div className="App ">
        <Heading/>
        <Togglebtn/>
-       <Now/>
+       {clickdata==true ?<Nowdetails/>:<Hourlydetails/>}
     </div>
   );
 }
