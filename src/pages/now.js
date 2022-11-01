@@ -5,7 +5,7 @@ export default function Now(){
     return(
         <div className="now">
           <Nowdetails/>
-          
+          <Hourlydetails/>
         </div>
     )
 }

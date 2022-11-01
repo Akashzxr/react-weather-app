@@ -70,7 +70,7 @@
 
 @media  screen and (max-width:700px) {
     .weather-details1{
-        gap: 6rem;
+        gap: 4rem;
     }
     .weather-details2{
         display: grid;
