@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { latitude, longtitude } from "../redux/reduxslice";
 import down from "../assets/pressure-low.svg";
 import up from "../assets/pressure-high.svg";
 import clouds from "../assets/04d.svg";
@@ -10,16 +8,11 @@ import humid from "../assets/humidity.svg";
 import rainsvg from "../assets/rain.svg";
 import wind from "../assets/wind.svg";
 import "../styles/nowdetails.css";
-import Togglebtn from "../components/togglebtn";
-import Heading from "../components/heading";
 import "../styles/App.css"
 
 export default function Nowdetails() {
 
    const ins = useSelector((state) => state.redux.input);
-   const lat = useSelector((state) => state.redux.lat);
-   const long = useSelector((state) => state.redux.long);
-   const dispatch = useDispatch();
 
    //const [ins,setins]=useState("kodungallur"); 
    const [day, setday] = useState();
@@ -74,22 +67,14 @@ export default function Nowdetails() {
       else {
          setrain(0.0);
       }
-      
-      //setting latitude and longitude
-      dispatch(latitude(result.coord.lat));
-      dispatch(longtitude(result.coord.lon));
    }
 
    useEffect(() => {
       getdata();
-   }, [ins])
+   },[ins])
 
    return (
       <div className="nowdetails">
-         <div className="App ">
-            <Heading/>
-            <Togglebtn/>
-         </div>
          <div className="dateandtime">
             <span>{day}</span>
             <span>{month},</span>

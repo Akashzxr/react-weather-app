@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE ={
-    click : true,
+     click : true,
      lat:10.2167,
      long:76.2167,
      input:"kodungallur",
