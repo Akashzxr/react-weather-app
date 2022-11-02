@@ -14,7 +14,7 @@ function App() {
     <div className="App ">
        <Heading/>
        <Togglebtn/>
-       {clickdata==true ?<Nowdetails/>:<Hourlydetails/>}
+       {clickdata===true ?<Nowdetails/>:<Hourlydetails/>}
     </div>
   );
 }
