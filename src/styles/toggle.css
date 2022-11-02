@@ -1,5 +1,5 @@
 .togglebtn{
-    background-color: rgb(229 229 229);
+    background-color: white;
     color: black;
     height: 4.5rem;
     width: 26.5rem;
@@ -24,7 +24,7 @@
 
 .slider{
     position: absolute;
-    background-color: white;
+    background-color: black;
     border-radius: 25px;
     height: 3.3rem;
     width: 13rem;
@@ -38,7 +38,7 @@
 
 #forecast-btn{
     position: relative;
-    right: 12%;
+    right: 9%;
 }
 
 #now-btn,#forecast-btn{

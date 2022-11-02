@@ -4,6 +4,8 @@ const INITIAL_STATE ={
      click : true,
      input:"kodungallur",
      data:"",
+     units:"metric",
+     unitval:"°C",
 }
 
 export const reduxSlice = createSlice({
@@ -19,11 +21,21 @@ export const reduxSlice = createSlice({
     click:(state,action)=>{
       state.click=action.payload;
     },
+    unit:(state)=>{
+     if(state.units==="metric"){
+      state.units="imperial";
+      state.unitval="°F";
+     }
+     else{
+      state.units="metric";
+      state.unitval = "°C";
+     }
+    },
   },
 });
 
 
-export const { input,data,click } = reduxSlice.actions;
+export const { unit,input,data,click } = reduxSlice.actions;
 
 
 export default reduxSlice.reducer;

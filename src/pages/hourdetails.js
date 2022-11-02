@@ -5,12 +5,14 @@ import "../styles/hourly.css";
 export default function Hourlydetails() {
 
     const input = useSelector((state) => state.redux.input);
+    const unitval = useSelector((state)=>state.redux.unitval);
+    const unit = useSelector((state)=>state.redux.units);
    
     const [data,setdata]=useState([]);
     
 
     async function getdata() {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input+'&cnt=5&units=metric&appid=55b2f4b739998d82795ba5cabb50890f&exclude=minutely,hourly', { mode: 'cors' });
+        const response = await fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input+'&cnt=5&units='+unit+'&appid=55b2f4b739998d82795ba5cabb50890f&exclude=minutely,hourly', { mode: 'cors' });
         const result = await response.json();
         setdata(result.list);
         console.log(data);
@@ -24,7 +26,7 @@ export default function Hourlydetails() {
 
     useEffect(() => {
         getdata();
-    }, [])
+    }, [input,unit])
 
     return (
         <div className="hourlydeails">

@@ -12,6 +12,8 @@ import "../styles/App.css"
 export default function Nowdetails() {
 
    const ins = useSelector((state) => state.redux.input);
+   const unitval = useSelector((state)=>state.redux.unitval);
+   const unit = useSelector((state)=>state.redux.units);
 
    //const [ins,setins]=useState("kodungallur"); 
    const [day, setday] = useState();
@@ -30,7 +32,7 @@ export default function Nowdetails() {
 
    async function getdata() {
       //fetching details
-      const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + ins + '&units=metric&exclude=hourly,minutely&appid=55b2f4b739998d82795ba5cabb50890f', { mode: 'cors' });
+      const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + ins + '&units='+unit+'&exclude=hourly,minutely&appid=55b2f4b739998d82795ba5cabb50890f', { mode: 'cors' });
       const result = await response.json();
 
       //getting date from the timezone
@@ -70,7 +72,7 @@ export default function Nowdetails() {
 
    useEffect(() => {
       getdata();
-   },[ins])
+   },[ins,unit])
 
    return (
       <div className="nowdetails">
@@ -83,16 +85,16 @@ export default function Nowdetails() {
          <div className="weather-details1" >
 
             <div className="weather">
-               <div className="bigweather">{weather}&#8451;</div>
+               <div className="bigweather">{weather}{unitval}</div>
 
                <div className="small-weather-container">
                   <div className="smallweather1" >
                      <img src={down} />
-                     <span>{weather}&#8451;</span>
+                     <span>{weather}{unitval}</span>
                   </div>
 
                   <div className="smallweather2">
-                     <span>{weather}&#8451;</span>
+                     <span>{weather}{unitval}</span>
                      <img src={up} />
                   </div>
                </div>
@@ -109,7 +111,7 @@ export default function Nowdetails() {
                <img src={feels} className="details2-icons" />
                <div className="text">
                   <div>Feels Like</div>
-                  <div className="value">{feelslike}&#8451;</div>
+                  <div className="value">{feelslike}{unitval}</div>
                </div>
             </div>
             <div className="humidity">

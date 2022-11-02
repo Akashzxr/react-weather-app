@@ -3,6 +3,7 @@ import "../styles/App.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { input } from "../redux/reduxslice";
+import { unit } from "../redux/reduxslice";
 export default function Heading(){
     
     const dispatch = useDispatch();
@@ -35,7 +36,7 @@ export default function Heading(){
            <button onClick={search} style={{display: searchclick?'block':'none'}} className="close-btn">x</button>
            <div className="btn-sec">
               <button onClick={search} style={{display: searchclick?'none':'block',visibility: clickdata?'visible':'hidden'}} className="searchbtn fa fa-search"></button>
-              <button style={{visibility: clickdata?'visible':'hidden'}} className="degreebtn">&#8451;</button>
+              <button onClick={()=>{dispatch(unit())}} style={{visibility: clickdata?'visible':'hidden'}} className="degreebtn">°C</button>
            </div>
           
         </div>

@@ -23,8 +23,8 @@ export default function Togglebtn(){
 
             <div className="btn-container">
 
-                <button onClick={nowclick} id="now-btn">Now</button>
-                <button onClick={hourlyclick} id="forecast-btn">Hourly Forecast</button>
+                <button style={{color: clickdata?'white':'black'}} onClick={nowclick} id="now-btn">Now</button>
+                <button style={{color: clickdata?'black':'white'}} onClick={hourlyclick} id="forecast-btn">Hourly Forecast</button>
                 
                 <span style={{transform: clickdata?'translateX(0%)':'translateX(95%)'}} className="slider"/>
             </div>
