@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import cloud from "../assets/04d.svg";
 import { useSelector } from "react-redux";
 import "../styles/hourly.css";
-import "../styles/App.css";
 
 export default function Hourlydetails() {
 
-    const inputdetail = useSelector((state) => state.redux.input);
+    const input = useSelector((state) => state.redux.input);
    
     const [data,setdata]=useState([]);
     
-    async function gethourdata() {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/forecast?q='+inputdetail+'&cnt=5&units=metric&appid=55b2f4b739998d82795ba5cabb50890f&exclude=minutely,hourly', { mode: 'cors' });
+
+    async function getdata() {
+        const response = await fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input+'&cnt=5&units=metric&appid=55b2f4b739998d82795ba5cabb50890f&exclude=minutely,hourly', { mode: 'cors' });
         const result = await response.json();
         setdata(result.list);
+        console.log(data);
     }
 
     const d=(date)=>{
@@ -22,20 +22,18 @@ export default function Hourlydetails() {
         return(time);
     }
 
-   
-    useEffect(()=>{
-        gethourdata();
-    },[inputdetail]);
+    useEffect(() => {
+        getdata();
+    }, [])
 
     return (
         <div className="hourlydeails">
-            {data[0].main.temp}
             {data.map((list,index)=>{
                 return(
-                    <div key={index} className="hour-weather-details">
+                    <div className="hour-weather-details">
                        <div>{d(list.dt_txt)}</div>
                        <div className="hourly-weather">{Math.round(list.main.temp)}&#8451;</div>
-                       <img src={cloud}/>
+                       <img src={require("../assets/"+list.weather[0].icon+".png")}/>
                     </div>
                 )
             })}

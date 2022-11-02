@@ -1,8 +1,8 @@
 import Heading from "./components/heading";
 import Togglebtn from "./components/togglebtn";
 import { useSelector } from "react-redux";
-import Nowdetails from "./components/now components/nowdetails";
-import Hourlydetails from "./components/now components/hourdetails";
+import Nowdetails from "./pages/nowdetails";
+import Hourlydetails from "./pages/hourdetails";
 import "./styles/App.css";
 
 

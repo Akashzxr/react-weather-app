@@ -24,7 +24,7 @@ export default function Togglebtn(){
             <div className="btn-container">
 
                 <button onClick={nowclick} id="now-btn">Now</button>
-                <button onClick={hourlyclick} id="forecast-btn">7 Day Forecast</button>
+                <button onClick={hourlyclick} id="forecast-btn">Hourly Forecast</button>
                 
                 <span style={{transform: clickdata?'translateX(0%)':'translateX(95%)'}} className="slider"/>
             </div>

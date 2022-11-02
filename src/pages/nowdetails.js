@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import down from "../assets/pressure-low.svg";
 import up from "../assets/pressure-high.svg";
-import clouds from "../assets/04d.svg";
 import feels from "../assets/feelslike.svg";
 import humid from "../assets/humidity.svg";
 import rainsvg from "../assets/rain.svg";
@@ -25,7 +24,7 @@ export default function Nowdetails() {
    const [humidity, sethumidity] = useState();
    const [windspeed, setwindspeed] = useState();
    const [rain, setrain] = useState();
-   const [icon, seticon] = useState();
+   const [icon, seticon] = useState("04d");
 
 
 
@@ -100,7 +99,7 @@ export default function Nowdetails() {
             </div>
 
             <div className="description-container">
-               <img src={clouds} className="clouds" />
+               <img src={require("../assets/"+icon+".png")} className="clouds" />
                <div className="value" >{description}</div>
             </div>
          </div>
