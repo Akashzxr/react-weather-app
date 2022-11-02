@@ -34,6 +34,11 @@ export default function Nowdetails() {
       //fetching details
       const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + ins + '&units='+unit+'&exclude=hourly,minutely&appid=55b2f4b739998d82795ba5cabb50890f', { mode: 'cors' });
       const result = await response.json();
+      if (!response.ok) {
+         alert("location not found.try entering without special character or real city name");
+     }
+
+      
 
       //getting date from the timezone
       let d = new Date().toLocaleString("en-US", { timeZone: result.timeZone });
