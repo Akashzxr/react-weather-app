@@ -1,20 +1,37 @@
 {
   "files": {
-    "main.css": "/react-weather-app/static/css/main.6e6a7a38.css",
-    "main.js": "/react-weather-app/static/js/main.ca755862.js",
+    "main.css": "/react-weather-app/static/css/main.8f3dce47.css",
+    "main.js": "/react-weather-app/static/js/main.37f5a2b5.js",
+    "static/media/13d.png": "/react-weather-app/static/media/13d.9957456da0445490c376.png",
+    "static/media/13n.png": "/react-weather-app/static/media/13n.9957456da0445490c376.png",
+    "static/media/09d.png": "/react-weather-app/static/media/09d.5380eba1128fa19c326f.png",
+    "static/media/09n.png": "/react-weather-app/static/media/09n.5380eba1128fa19c326f.png",
+    "static/media/11d.png": "/react-weather-app/static/media/11d.cb8726bd28c18f529c4a.png",
+    "static/media/11n.png": "/react-weather-app/static/media/11n.cb8726bd28c18f529c4a.png",
+    "static/media/03d.png": "/react-weather-app/static/media/03d.20f0cc1d2fa7fabb49bb.png",
+    "static/media/03n.png": "/react-weather-app/static/media/03n.20f0cc1d2fa7fabb49bb.png",
+    "static/media/10d.png": "/react-weather-app/static/media/10d.31150bd7471d99e8f2d9.png",
+    "static/media/10n.png": "/react-weather-app/static/media/10n.31150bd7471d99e8f2d9.png",
+    "static/media/50d.png": "/react-weather-app/static/media/50d.cffbd3961a9c22f3bfcc.png",
+    "static/media/50n.png": "/react-weather-app/static/media/50n.cffbd3961a9c22f3bfcc.png",
+    "static/media/01d.png": "/react-weather-app/static/media/01d.6d48da504f4816188c8d.png",
+    "static/media/01n.png": "/react-weather-app/static/media/01n.6d48da504f4816188c8d.png",
+    "static/media/02d.png": "/react-weather-app/static/media/02d.a6d0b7d87d2022baaf47.png",
+    "static/media/02n.png": "/react-weather-app/static/media/02n.a6d0b7d87d2022baaf47.png",
+    "static/media/04d.png": "/react-weather-app/static/media/04d.15eb556cd941ec7fc2b4.png",
+    "static/media/04n.png": "/react-weather-app/static/media/04n.15eb556cd941ec7fc2b4.png",
     "static/media/pressure-high.svg": "/react-weather-app/static/media/pressure-high.185c6544f422ea19fb358966d84d44a8.svg",
     "static/media/pressure-low.svg": "/react-weather-app/static/media/pressure-low.e0109dd2ca9b36523166294f0578cfc5.svg",
-    "static/media/04d.svg": "/react-weather-app/static/media/04d.45e9e87bb18e1c2ae6b3db32296071b0.svg",
     "static/media/humidity.svg": "/react-weather-app/static/media/humidity.f6f97c5f6b692e20bbb132d27e5fa8e1.svg",
     "static/media/rain.svg": "/react-weather-app/static/media/rain.a164ac4f8560e3bef832e0b9643f53c3.svg",
     "static/media/feelslike.svg": "/react-weather-app/static/media/feelslike.08fc871be54f08b6c0e3c0c349bbb677.svg",
     "static/media/wind.svg": "/react-weather-app/static/media/wind.7666ea56edeecb3eff022542f7995c2d.svg",
     "index.html": "/react-weather-app/index.html",
-    "main.6e6a7a38.css.map": "/react-weather-app/static/css/main.6e6a7a38.css.map",
-    "main.ca755862.js.map": "/react-weather-app/static/js/main.ca755862.js.map"
+    "main.8f3dce47.css.map": "/react-weather-app/static/css/main.8f3dce47.css.map",
+    "main.37f5a2b5.js.map": "/react-weather-app/static/js/main.37f5a2b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e6a7a38.css",
-    "static/js/main.ca755862.js"
+    "static/css/main.8f3dce47.css",
+    "static/js/main.37f5a2b5.js"
   ]
 }
